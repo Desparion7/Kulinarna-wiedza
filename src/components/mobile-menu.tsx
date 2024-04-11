@@ -61,15 +61,21 @@ const MobileMenu = ({ handleToggleMenu, menuVisible }: MobileMenuProps) => {
 									</Link>
 								</li>
 							</ul>
-							<div className='flex justify-center'>
-								<Image
-									src='/logo.png'
-									alt='logo'
-									width={245}
-									height={229}
-									className='absolute bottom-14 w-[6rem] '
-									priority
-								/>
+							<div className='flex justify-center items-center flex-end h-full'>
+								<div>
+									<Image
+										src='/logo.png'
+										alt='logo'
+										width={500}
+										height={500}
+										className='w-[6rem] '
+										priority
+									/>
+								</div>
+								<p className='text-xl uppercase font-semibold'>
+									<span className='text-green-500 '>K</span>
+									ulinarna wiedza
+								</p>
 							</div>
 						</motion.div>
 					</motion.div>
