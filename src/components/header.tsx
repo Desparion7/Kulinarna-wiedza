@@ -7,7 +7,7 @@ import { cn } from '@/utils/utils';
 import { usePathname } from 'next/navigation';
 import BurgerMenuBtn from './burger-menu-btn';
 import MobileMenu from './mobile-menu';
-// import MobileMenu from './mobile-menu';
+
 
 const Header = () => {
 	const currentUrl = usePathname();
@@ -24,9 +24,18 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='sticky flex sm:justify-center justify-between w-[100%] z-10 top-0 bg-white text-black'>
+			<header className='sticky flex flex-col sm:justify-center justify-between w-[100%] z-10 top-0 bg-white text-black'>
+				<div className='w-[full] h-[20px] relative'>
+					<Image
+						src='/top.jpg'
+						alt=''
+						fill
+						priority
+						className='absolute'
+					/>
+				</div>
 				<motion.nav
-					className='sm:container flex justify-between items-center py-2 w-[100vw] relative'
+					className='sm:container sm:m-auto flex justify-between items-center py-2 w-[100%] relative '
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -40,7 +49,7 @@ const Header = () => {
 								}}
 								className='flex items-center ml-5 sm:ml-0'
 							>
-								<div className='w-[5rem] sm:w-[8rem]'>
+								<div className='w-[5rem] sm:w-[6rem]'>
 									<Image
 										src='/logo.png'
 										alt='logo'
@@ -49,15 +58,29 @@ const Header = () => {
 										priority
 									/>
 								</div>
-								<p className='text-xl uppercase font-semibold'>
-									<span className='text-green-500 '>K</span>
-									ulinarna wiedza
-								</p>
+								<div>
+									<p className='text-lg uppercase font-semibold'>
+										<span className='text-green-500 '>
+											S
+										</span>
+										mart
+										<span className='text-green-500 '>
+											E
+										</span>
+										at
+									</p>
+									<p className='text-lg uppercase font-semibold'>
+										<span className='text-green-500 '>
+											A
+										</span>
+										dvisor
+									</p>
+								</div>
 							</motion.div>
 						</Link>
 					</div>
 					<div className='hidden lg:flex items-end justify-end py-4 px-5'>
-						<ul className='flex gap-10 uppercase items-center text-xl tracking-wider font-semibold'>
+						<ul className='flex gap-10 uppercase items-center text-lg tracking-wider font-semibold'>
 							<li
 								className={cn(`lg:text-md `, {
 									[`text-green-500`]: currentUrl === '/',
