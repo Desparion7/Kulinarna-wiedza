@@ -8,7 +8,6 @@ import { usePathname } from 'next/navigation';
 import BurgerMenuBtn from './burger-menu-btn';
 import MobileMenu from './mobile-menu';
 
-
 const Header = () => {
 	const currentUrl = usePathname();
 	const [menuVisible, setMenuVisible] = useState(false);
@@ -35,7 +34,7 @@ const Header = () => {
 					/>
 				</div>
 				<motion.nav
-					className='sm:container sm:m-auto flex justify-between items-center py-2 w-[100%] relative '
+					className='sm:container sm:m-auto flex justify-between items-center w-[100%] relative '
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
@@ -60,17 +59,17 @@ const Header = () => {
 								</div>
 								<div>
 									<p className='text-lg uppercase font-semibold'>
-										<span className='text-green-500 '>
+										<span className='text-main-color '>
 											S
 										</span>
 										mart
-										<span className='text-green-500 '>
+										<span className='text-main-color '>
 											E
 										</span>
 										at
 									</p>
 									<p className='text-lg uppercase font-semibold'>
-										<span className='text-green-500 '>
+										<span className='text-main-color '>
 											A
 										</span>
 										dvisor
@@ -83,12 +82,12 @@ const Header = () => {
 						<ul className='flex gap-10 uppercase items-center text-lg tracking-wider font-semibold'>
 							<li
 								className={cn(`lg:text-md `, {
-									[`text-green-500`]: currentUrl === '/',
+									[`text-main-color`]: currentUrl === '/',
 								})}
 							>
 								<Link href='/'>
-									<div className='flex items-center hover:text-green-500 transition-colors duration-300'>
-										<span className='text-green-500'>
+									<div className='flex items-center hover:text-main-color transition-colors duration-300'>
+										<span className='text-main-color'>
 											S
 										</span>
 										trona główna
@@ -97,13 +96,13 @@ const Header = () => {
 							</li>
 							<li
 								className={cn(`lg:text-md `, {
-									[`text-green-500`]:
+									[`text-main-color`]:
 										currentUrl === '/baza-produktow',
 								})}
 							>
 								<Link href='/baza-produktow'>
-									<div className='flex items-center hover:text-green-500 transition-colors duration-300'>
-										<span className='text-green-500'>
+									<div className='flex items-center hover:text-main-color transition-colors duration-300'>
+										<span className='text-main-color'>
 											B
 										</span>
 										aza produktów
@@ -112,13 +111,13 @@ const Header = () => {
 							</li>
 							<li
 								className={cn(`lg:text-md `, {
-									[`text-green-500`]:
+									[`text-main-color`]:
 										currentUrl === '/moje-konto',
 								})}
 							>
 								<Link href='/moje-konto'>
-									<div className='flex items-center hover:text-green-500 transition-colors duration-300'>
-										<span className='text-green-500'>
+									<div className='flex items-center hover:text-main-color transition-colors duration-300'>
+										<span className='text-main-color'>
 											M
 										</span>
 										oje konto
