@@ -59,7 +59,7 @@ const AboutApp = () => {
 					className='w-[100vw] h-[28rem]'
 				/>
 				<div className='w-[50%] absolute bg-white bg-opacity-85 p-10 shadow-xl shadow-black rounded-xl'>
-					<h2 className='text-2xl text-main-color font-bold  mb-2 tracking-wider	'>
+					<h2 className='text-2xl text-main-color font-bold  mb-2 tracking-wider'>
 						Baza produktów{' '}
 					</h2>
 					<p className='text-xl font-semibold text-black leading-10'>
