@@ -5,3 +5,7 @@
 :root {
 	--main-color: #0da621;
 }
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
