@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutApp = () => {
 	return (
-		<section>
+		<section className='mt-[10rem]'>
 			<div className='relative flex justify-center items-center mb-10'>
 				<Image
 					src='/tło2.jpg'
@@ -11,34 +11,34 @@ const AboutApp = () => {
 					width={918}
 					height={258}
 					priority
-					className='w-[100vw] h-[28rem] opacity-30'
+					className='w-[100vw] h-[28rem] opacity-30 z-[-3]'
 				/>
-				<div className='w-[50%] mr-[10rem] absolute bg-white bg-opacity-85 p-10 shadow-xl shadow-gray-500 mb-2 rounded-xl border-gray-200 border-2'>
-					<h2 className='text-2xl text-main-color font-bold  mb-2 tracking-wider	'>
+				<div className='w-[90%] lg:w-[70%]  absolute bg-white bg-opacity-85 p-5 md:p-8 lg:p-10 shadow-xl shadow-gray-500 mb-2 rounded-xl border-gray-200 border-2 z-5'>
+					<h2 className='text-xl md:text-2xl text-main-color font-bold  mb-2 tracking-wider	'>
 						Jak to działa?{' '}
 					</h2>
-					<p className='text-xl font-semibold text-black leading-10'>
+					<p className='md:text-xl font-semibold text-black leading-8 md:leading-10'>
 						Bez logowania masz dostęp do bazy naszych produktów i
 						możesz sprawdzić ile dany produkt dostarcza wartości
 						odżywczych.
 					</p>
-					<p className='text-xl font-semibold text-black leading-10'>
+					<p className='md:text-xl font-semibold text-black leading-8 md:leading-10'>
 						Po utworzeniu konta i uzupełnieniu niezbędnych
 						parametrów możesz zacząć tworzyć dietę na podstawie
 						naszych baz danych. A aplikacja wyliczy Ci, w jakim
 						stopniu pokrywasz dzienne zapotrzebowanie na kalorie
 						oraz wszystkie mikroskładniki.
 					</p>
-					<div className='w-full flex justify-center gap-10 mt-3'>
-						<button className='px-6 py-3 bg-main-color text-white rounded-xl text-xl '>
+					<div className='w-full flex flex-col md:flex-row justify-center gap-5 lg:gap-10 mt-8'>
+						<button className='px-6 py-3 bg-main-color text-white rounded-xl lg:text-xl '>
 							Zaloguj się
 						</button>
-						<button className='px-6 py-3 border-2 border-main-color text-main-color rounded-xl text-xl hover:bg-main-color hover:text-white transition-colors duration-300'>
+						<button className='px-6 py-3 border-2 border-main-color text-main-color rounded-xl lg:text-xl hover:bg-main-color hover:text-white transition-colors duration-300'>
 							Utwórz konto
 						</button>
 					</div>
 				</div>
-				<div className='mt-[5rem] absolute  bottom-[-28rem] left-[-10rem] z-10'>
+				<div className='mt-[5rem] absolute  bottom-[-28rem] left-[-10rem] z-[-2]'>
 					<Image
 						src='/banany.png'
 						alt=''
@@ -49,7 +49,7 @@ const AboutApp = () => {
 					/>
 				</div>
 			</div>
-			<div className='relative flex justify-center items-center mt-[1rem] shadow-xl shadow-black'>
+			{/* <div className='relative flex justify-center items-center mt-[1rem] shadow-xl shadow-black'>
 				<Image
 					src='/tło.jpg'
 					alt=''
@@ -78,7 +78,7 @@ const AboutApp = () => {
 					priority
 					className='w-[36rem] absolute bottom-[-12rem] right-[-10rem] rotate-[-30deg] z-10'
 				/>
-			</div>
+			</div> */}
 		</section>
 	);
 };

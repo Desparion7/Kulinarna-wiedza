@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<div>
 			<Intro />
-			{/* <AboutApp /> */}
+			<AboutApp />
 		</div>
 	);
 }

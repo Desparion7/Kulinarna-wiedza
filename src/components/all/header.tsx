@@ -15,17 +15,17 @@ const Header = () => {
 	const handleToggleMenu = () => {
 		setMenuVisible((prev) => {
 			!prev
-				? (document.body.style.overflow = 'hidden')
-				: (document.body.style.overflow = 'auto');
+				? (document.body.style.overflowY = 'hidden')
+				: (document.body.style.overflowY = 'auto');
 			return !prev;
 		});
 	};
 
 	return (
 		<>
-			<header className='sticky flex flex-col sm:justify-center justify-between w-[100%] z-20 top-0 bg-white text-black'>
+			<header className='fixed flex flex-col sm:justify-center items-center justify-between w-[100%] z-20 top-0 text-black min-h-[12vh] bg-white'>
 				<motion.nav
-					className='sm:container sm:m-auto flex justify-between items-center w-[100%] relative '
+					className='sm:container sm:m-auto flex justify-between items-center w-[100%] h-[100%]'
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
