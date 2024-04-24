@@ -5,7 +5,15 @@
 :root {
 	--main-color: #0da621;
 }
+
 body {
-	max-width: 100%;
+	position: relative;
 	overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		position: relative;
+		overflow-x: hidden;
+	}
 }

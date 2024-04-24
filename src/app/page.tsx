@@ -3,9 +3,9 @@ import Intro from '@/components/main-page/intro';
 
 export default function Home() {
 	return (
-		<>
+		<div>
 			<Intro />
 			{/* <AboutApp /> */}
-		</>
+		</div>
 	);
 }

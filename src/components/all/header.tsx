@@ -24,15 +24,6 @@ const Header = () => {
 	return (
 		<>
 			<header className='sticky flex flex-col sm:justify-center justify-between w-[100%] z-20 top-0 bg-white text-black'>
-				<div className='w-[full] h-[20px] relative'>
-					<Image
-						src='/top.jpg'
-						alt=''
-						fill
-						priority
-						className='absolute'
-					/>
-				</div>
 				<motion.nav
 					className='sm:container sm:m-auto flex justify-between items-center w-[100%] relative '
 					initial={{ opacity: 0, y: -50 }}
