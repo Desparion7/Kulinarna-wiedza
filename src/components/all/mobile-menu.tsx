@@ -15,30 +15,35 @@ const MobileMenu = ({ handleToggleMenu, menuVisible }: MobileMenuProps) => {
 	};
 
 	return (
-		<nav className='absolute uppercase lg:hidden overflow-hidden z-[20] '>
+		<nav className='fixed uppercase lg:hidden overflow-hidden z-[20] top-0'>
 			<AnimatePresence>
 				{menuVisible && (
 					<motion.div
-						className='bg-black bg-opacity-20 w-screen h-screen font-semibold'
+						className='bg-black bg-opacity-20 w-screen h-[100vh] font-semibold'
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						onClick={handleCloseMenu}
 					>
 						<motion.div
-							className='absolute  h-screen w-[100%] left-0 z-[20]'
+							className='absolute h-[100vh] w-[100%] left-0 z-[20]'
 							initial={{ x: 100, opacity: 0 }}
 							animate={{ x: 0, opacity: 1 }}
 							exit={{ x: 100, opacity: 0 }}
 							onClick={(event) => {
 								event.stopPropagation();
 							}}
-							style={{
-								background:
-									'linear-gradient(141deg, rgba(219,231,212,1) 17%, rgba(211,250,215,1) 55%, rgba(64,240,81,1) 98%)',
-							}}
 						>
-							<ul className='flex flex-col gap-2 custom:gap-4 text-black text-lg p-10  mt-10'>
+							<div className='absolute w-full bg-black bg-opacity-60 h-[100vh]'></div>
+							<Image
+								src='/mobile-menu-bg.jpg'
+								alt='background mobile'
+								sizes='100vh'
+								fill
+								priority
+								className='absolute object-cover xl:hidden shadow-xl shadow-black z-[-1]'
+							/>
+							<ul className='relative flex flex-col gap-4 custom:gap-6 text-white text-xl custom:text-2xl p-5 mt-10 z-[20]'>
 								<li>
 									<Link href='/' onClick={handleCloseMenu}>
 										Strona główna
@@ -61,21 +66,35 @@ const MobileMenu = ({ handleToggleMenu, menuVisible }: MobileMenuProps) => {
 									</Link>
 								</li>
 							</ul>
-							<div className='flex justify-center items-center flex-end h-full'>
+							<div className='relative flex justify-center flex-col items-center flex-end h-full pb-[5rem] z-[20]'>
 								<div>
 									<Image
 										src='/logo.png'
 										alt='logo'
 										width={500}
 										height={500}
-										className='w-[6rem] '
+										className='w-[10rem] '
 										priority
 									/>
 								</div>
-								<p className='text-xl uppercase font-semibold'>
-									<span className='text-green-500 '>K</span>
-									ulinarna wiedza
-								</p>
+								<div className='text-white text-xl custom:text-3xl flex gap-5'>
+									<p className='uppercase font-semibold'>
+										<span className='text-main-color '>
+											S
+										</span>
+										mart
+										<span className='text-main-color '>
+											E
+										</span>
+										at
+									</p>
+									<p className='uppercase font-semibold'>
+										<span className='text-main-color '>
+											A
+										</span>
+										dvisor
+									</p>
+								</div>
 							</div>
 						</motion.div>
 					</motion.div>

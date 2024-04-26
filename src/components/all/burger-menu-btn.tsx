@@ -13,7 +13,7 @@ const BurgerMenuBtn = ({ toggle, isMenuVisible }: MenuToggleButtonProps) => {
 				<button
 					aria-label='toggle menu'
 					onClick={() => toggle((prev) => !prev)}
-					className='relative border border-transparent cursor-pointer z-50 focus:outline-none bg-transparent'
+					className='relative border border-transparent cursor-pointer focus:outline-none bg-transparent'
 				>
 					<div className='relative w-[60px] h-10'>
 						<div className='absolute right-0 bg-green-500 h-2 w-full' />
@@ -25,11 +25,11 @@ const BurgerMenuBtn = ({ toggle, isMenuVisible }: MenuToggleButtonProps) => {
 				<button
 					aria-label='toggle menu'
 					onClick={() => toggle((prev) => !prev)}
-					className='relative border border-transparent cursor-pointer z-50 focus:outline-none bg-transparent'
+					className='relative border border-transparent cursor-pointer focus:outline-none bg-transparent'
 				>
-					<div className='relative w-[60px] h-10'>
+					<div className='relative top-0 w-[60px] h-10'>
 						<div className='absolute right-0 bg-green-500  top-3 h-2 w-full rotate-[135deg]' />
-						<div className='absolute right-0 bg-black top-3 h-2 w-full rotate-[45deg]' />
+						<div className='absolute right-0 bg-white top-3 h-2 w-full rotate-[45deg]' />
 					</div>
 				</button>
 			)}

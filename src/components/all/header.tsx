@@ -118,7 +118,7 @@ const Header = () => {
 						</ul>
 					</div>
 					<motion.div
-						className='relative lg:hidden p-2 py-4 mr-2 sm:pr-3 z-30  rounded-lg'
+						className='relative lg:hidden p-2 py-4 mr-2 sm:pr-3 rounded-lg z-50'
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ opacity: 1, y: 0 }}
 					>
